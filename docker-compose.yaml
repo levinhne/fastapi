@@ -1,0 +1,23 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      PGDATA: /data/postgres
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  dbeaver:
+    container_name: dbeaver
+    image: dbeaver/cloudbeaver:latest
+    ports:
+      - "8978:8978"  # This maps DBeaver's port to your host
+    restart: unless-stopped
+
+volumes:
+  postgres:

@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-# Copyright (c) 2024, FPT Smart Cloud
-# All rights reserved. Unauthorized copying of this file, via any medium, is strictly prohibited.
-# Proprietary and confidential.
 
 """Service Application Module"""
 
